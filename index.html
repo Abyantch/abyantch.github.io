@@ -49,9 +49,9 @@
 
     <!-- Jumbotron -->
     <section class="jumbotron text-center">
-      <img src="img/abyan1.jpg" alt="Abyan" width="200" class="rounded-circle img-thumbnail" data-aos="flip-right" />
+      <img src="img/abyan1.jpg" alt="Abyan" width="200" class="rounded-circle img-thumbnail" />
       <h1 class="display-4">Muhammad Hafidz Amanullah Abyan</h1>
-      <p class="lead">College Student | Perfectionist Leo.</p>
+      <p class="lead"></p>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
         <path
           fill="#ffffff"
@@ -207,6 +207,18 @@
     <script>
       AOS.init();
     </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/TextPlugin.min.js"></script>
+    <script>
+      gsap.registerPlugin(TextPlugin);
+      gsap.to(".lead", { duration: 1.5, delay: 1.5, text: "College Student | Perfectionist Leo." });
+      gsap.from(".jumbotron img", { duration: 2, rotateY: 360, opacity: 0, ease: "bounce" });
+      gsap.from(".navbar", { duration: 1.5, y: "-100%", opacity: 0, ease: "bounce" });
+      gsap.from(".display-4", { duration: 1, x: -50, opacity: 0, delay: 0.5, ease: "back" });
+      gsap.from(".lead", { duration: 1, x: -50, opacity: 0, delay: 0.5, ease: "back" });
+    </script>
+
     <script>
       const scriptURL = "https://script.google.com/macros/s/AKfycbwfUy_u_Ye0JPFQqKsd836t_0ZbOfHJs4goUSSEIHC67R1QEEy2nEGRvfB3JQvU9Fw8/exec";
       const form = document.forms["pesan-abyan"];
